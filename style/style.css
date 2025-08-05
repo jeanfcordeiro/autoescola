@@ -1,20 +1,20 @@
 
 :root {
-    /* Cores */
-    --cor-primaria: #1a1a1a;
-    --cor-secundaria: #FFD500;
-    --cor-texto: #2C2C2C;
-    --cor-fundo: #F5F5F5;
-    --cor-destaque: #FF5722;
+  /* Cores */
+  --cor-primaria: #1a1a1a;
+  --cor-secundaria: #FFD500;
+  --cor-texto: #2C2C2C;
+  --cor-fundo: #F5F5F5;
+  --cor-destaque: #FF5722;
+
+  /* Tipografia */
+  --fonte-principal: 'Segoe UI', sans-serif;
+  --tamanho-titulo: 2rem;
+  --tamanho-texto: 1rem;
   
-    /* Tipografia */
-    --fonte-principal: 'Segoe UI', sans-serif;
-    --tamanho-titulo: 2rem;
-    --tamanho-texto: 1rem;
-    
-    /* Espaçamentos */
-    --espacamento-padrao: 1rem;
-    --largura-maxima: 1200px;
+  /* Espaçamentos */
+  --espacamento-padrao: 1rem;
+  --largura-maxima: 1200px;
 }
 
 * {
@@ -43,7 +43,6 @@ img {
   max-width: 100%;
   display: block;
 }
-
 
 /* preview header */
 header {
@@ -74,3 +73,77 @@ header ul li a:hover {
   color: var(--cor-destaque);
 }
 
+
+/* Carrossel */
+
+section.slider{
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.slider-content{
+  width: 400%;
+  height: auto;
+  display: flex;
+}
+
+.slider-content input{
+  display: none;
+}
+
+.slide-box{
+  width: 25%;
+  height: auto;
+  position: relative;
+  text-align: center;
+  transition: .5s;
+}
+
+.slide-box img{
+  width: 100%;
+}
+
+.nav-manual, .nav-auto{
+  position: absolute;
+  width: 100%;
+  margin-top: 61%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-manual .manual-btn, .nav-auto div{
+  border: 1px solid var(--cor-primaria);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child){
+  margin-right: 10px;
+}
+
+.nav-manual .manual-btn:hover{
+  background-color: var(--cor-secundaria);
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1,
+#radio2:checked ~ .nav-auto .auto-btn2,
+#radio3:checked ~ .nav-auto .auto-btn3{
+  background-color: var(--cor-secundaria);
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -50%;
+}

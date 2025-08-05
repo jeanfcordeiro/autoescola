@@ -33,36 +33,36 @@
         <img src="assets/img/hero-image.jpg" alt="Imagem de um carro">
     </section>
 
-    <section class="servicos">
-        <h2>Serviços</h2>
+    <section class="slider">
+        <div class="slider-content">
 
-        <div class="carousel-container">
-            <div class="carousel">
-                <div class="carousel-item active">
-                    <h3>Habilitação Categoria A</h3>
-                    <p>Aulas teóricas e práticas para motociclistas.</p>
-                </div>
-                <div class="carousel-item">
-                    <h3>Habilitação Categoria B</h3>
-                    <p>Treinamento completo para carros de passeio.</p>
-                </div>
-                <div class="carousel-item">
-                    <h3>Curso de Reciclagem</h3>
-                    <p>Atualização obrigatória para condutores com infrações.</p>
-                </div>
+            <input type="radio" name="btn-radio" id="radio1" checked>
+            <input type="radio" name="btn-radio" id="radio2" checked>
+            <input type="radio" name="btn-radio" id="radio3" checked>
+
+            <div class="slide-box first">
+                <img src="assets/img/teste-carousel-blue.png" alt="slide 1">
+            </div>
+            <div class="slide-box">
+                <img src="assets/img/teste-carousel-red.png" alt="slide 1">
+            </div>
+            <div class="slide-box">
+                <img src="assets/img/teste-carousel-green.png" alt="slide 1">
             </div>
 
-            <!-- Botões de navegação -->
-            <button class="carousel-btn prev">◀</button>
-            <button class="carousel-btn next">▶</button>
+            <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
 
-            <!-- Indicadores (opcional) -->
-            <div class="carousel-indicators">
-            <span class="indicator active" data-slide="0"></span>
-            <span class="indicator" data-slide="1"></span>
-            <span class="indicator" data-slide="2"></span>
+            <div class="nav-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
             </div>
         </div>
+    
     </section>
 
     <section class="sobre">
@@ -78,5 +78,9 @@
     <footer>
         <p>&copy; 2023 Auto Escola Urbanitana. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="js/script.js"></script>
+
 </body>
+
 </html>
