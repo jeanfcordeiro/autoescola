@@ -12,15 +12,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <h1><a href="">URBANITANA</a></h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Contato</a></li>
+    <div class="content-wrapper-center">
+    <header class="header">
+        <h1 class="header__logo"><a href="/">URBANITANA</a></h1>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#">Home</a></li>
+                <li class="header__nav-item"><a href="#">Sobre</a></li>
+                <li class="header__nav-item"><a href="#">Serviços</a></li>
+                <li class="header__nav-item"><a href="#">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -29,15 +31,17 @@
         <div class="slider-content">
 
             <input type="radio" name="btn-radio" id="radio1" checked>
-            <input type="radio" name="btn-radio" id="radio2" checked>
-            <input type="radio" name="btn-radio" id="radio3" checked>
+            <input type="radio" name="btn-radio" id="radio2">
+            <input type="radio" name="btn-radio" id="radio3">
 
             <div class="slide-box first">
                 <img src="assets/img/teste-carousel-blue.png" alt="slide 1">
             </div>
+
             <div class="slide-box">
                 <img src="assets/img/teste-carousel-red.png" alt="slide 1">
             </div>
+
             <div class="slide-box">
                 <img src="assets/img/teste-carousel-green.png" alt="slide 1">
             </div>
@@ -58,141 +62,130 @@
     </section>
 
     <section class="services">
-  <div class="services__container">
+        <div class="services__container">
 
-    <div class="services__header">
-      <h2 class="services__title">Nossos Serviços</h2>
-      <p class="services__description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo impedit quibusdam dignissimos obcaecati commodi quasi.
-      </p>
-    </div>
+            <div class="services__header">
+                <h2 class="services__title">Nossos Serviços</h2>
+                <p class="services__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo impedit quibusdam dignissimos obcaecati commodi quasi.
+                </p>
+            </div>
 
-    <div class="services__cards">
-      <div class="services__card">
-        <div class="services__icon">
-            <svg>
-                <use xlink:href="assets/img/icomoon/symbol-defs.svg#icon-automobile"></use>
-            </svg>
+            <ul class="services__cards">
+                <li class="services__card">
+                    <svg class="services__icon">
+                        <use xlink:href="assets/img/icomoon/symbol-defs.svg#icon-automobile"></use>
+                    </svg>
+                    <h3 class="services__card-title">Primeira Habilitação</h3>
+                    <p class="services__card-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, quaerat.
+                    </p>
+                </li>
+
+                <li class="services__card">
+                    <div class="services__icon">
+                        <svg>
+                            <use xlink:href="assets/img/icomoon/symbol-defs.svg#icon-truck"></use>
+                        </svg>
+                    </div>
+                    <h3 class="services__card-title">Alteração de Categoria</h3>
+                    <p class="services__card-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, quaerat.
+                    </p>
+                </li>
+
+                <li class="services__card">
+                    <div class="services__icon">
+                        <svg>
+                            <use xlink:href="assets/img/icomoon/symbol-defs.svg#icon-warning"></use>
+                        </svg>
+                    </div>
+                    <h3 class="services__card-title">Reciclagem</h3>
+                    <p class="services__card-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, quaerat.
+                    </p>
+                </li>
+
+                <li class="services__card">
+                    <div class="services__icon">
+                        <svg>
+                            <use xlink:href="assets/img/icomoon/symbol-defs.svg#icon-clipboard"></use>
+                        </svg>
+                    </div>
+                    <h3 class="services__card-title">Outros Serviços</h3>
+                    <p class="services__card-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, quaerat.
+                    </p>
+                </li>
+            </ul>
+
         </div>
-        <h3 class="services__card-title">Primeira Habilitação</h3>
-        <p class="services__card-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, quaerat.
-        </p>
-      </div>
-
-      <div class="services__card">
-        <div class="services__icon">
-            <svg>
-                <use xlink:href="assets/img/icomoon/symbol-defs.svg#icon-truck"></use>
-            </svg>
-        </div>
-        <h3 class="services__card-title">Alteração de Categoria</h3>
-        <p class="services__card-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, quaerat.
-        </p>
-      </div>
-
-      <div class="services__card">
-        <div class="services__icon">
-            <svg>
-                <use xlink:href="assets/img/icomoon/symbol-defs.svg#icon-warning"></use>
-            </svg>
-        </div>
-        <h3 class="services__card-title">Reciclagem</h3>
-        <p class="services__card-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, quaerat.
-        </p>
-      </div>
-
-      <div class="services__card">
-        <div class="services__icon">
-            <svg>
-                <use xlink:href="assets/img/icomoon/symbol-defs.svg#icon-clipboard"></use>
-            </svg>
-        </div>
-        <h3 class="services__card-title">Outros Serviços</h3>
-        <p class="services__card-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, quaerat.
-        </p>
-      </div>
-    </div>
-
-  </div>
-</section>    
+    </section>    
 
     <section class="about">
-  <div class="about__container">
-    
-    <div class="about__intro">
-      <h2>Sobre a Auto Escola Urbanitana</h2>
-      <p>Conheça nossa história, valores e estrutura de ensino.</p>
-    </div>
+        <div class="about__container">
+            
+            <div class="about__header">
+                <h2 class="about__title">Sobre a Auto Escola Urbanitana</h2>
+                <p class="about__subtitle">Conheça nossa história, valores e estrutura de ensino.</p>
+            </div>
 
-    <div class="about__content">
-      
-      <div class="about__item">
-        <h3>Nossos Valores</h3>
-        <p>Prezamos pela ética, segurança no trânsito, inclusão e compromisso com o aprendizado de nossos alunos.</p>
-      </div>
-
-      <div class="about__item">
-        <h3>Estrutura</h3>
-        <p>Contamos com salas modernas, simuladores de direção, frota atualizada e ambiente confortável para aulas teóricas e práticas.</p>
-      </div>
-
-      <div class="about__item">
-        <h3>Nossa Equipe</h3>
-        <p>Instrutores certificados, equipe administrativa atenciosa e professores com experiência no ensino de direção responsável.</p>
-      </div>
-    </div>
-  </div>
-</section>    
+            <ul class="about__cards">
+                <li class="about__card">
+                    <div class="about-content">
+                        <h3>Nossos Valores</h3>
+                        <p>Prezamos pela ética, segurança no trânsito, inclusão e compromisso com o aprendizado de nossos alunos.</p>
+                    </div>
+                </li>
+                <li class="about__card">
+                    <div class="about-content">
+                        <h3>Estrutura</h3>
+                        <p>Contamos com salas modernas, simuladores de direção, frota atualizada e ambiente confortável para aulas teóricas e práticas.</p>
+                    </div>
+                </li>
+                <li class="about__card">
+                    <div class="about-content">
+                        <h3>Nossa Equipe</h3>
+                        <p>Instrutores certificados, equipe administrativa atenciosa e professores com experiência no ensino de direção responsável.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>    
 
     <section class="contact">
-  <div class="contact__container">
-    
-      <a class="contact__card" href="https://instagram.com/autoescolaurbanitana" target="_blank">
-        <svg>
-                  <use xlink:href="assets/img/icomoon/symbol-defs.svg#icon-whatsapp"></use>
-              </svg>
-        <p>(00) 00000-0000</p>
-      </a>
+        <ul class="contact__container">
 
-    <a class="contact__card" href="https://wa.me/5599999999999" target="_blank">
-      <svg>
-                <use xlink:href="assets/img/icomoon/symbol-defs.svg#icon-instagram"></use>
-            </svg>
-      <p>@autoescolaurbanitana</p>
-    </a>
+            <li><a class="contact__card" href="#" target="_blank" rel="noopener noreferrer" aria-label="Contato pelo WhatsApp">
+                <svg class="contact__icon">
+                    <use xlink:href="assets/img/icomoon/symbol-defs.svg#icon-whatsapp"></use>
+                </svg>
+                <p class="contact__text">(00) 00000-0000</p>
+            </a></li>
 
-    <a class="contact__card" href="https://facebook.com/autoescolaurbanitana" target="_blank">
-      <svg>
-                <use xlink:href="assets/img/icomoon/symbol-defs.svg#icon-facebook2"></use>
-            </svg>
-      <p>/autoescolaurbanitana</p>
-    </a>
+            <li><a class="contact__card" href="#" target="_blank" rel="noopener noreferrer" aria-label="Visite nosso Instagram">
+                <svg class="contact__icon">
+                    <use xlink:href="assets/img/icomoon/symbol-defs.svg#icon-instagram"></use>
+                </svg>
+                <p class="contact__text">@autoescolaurbanitana</p>
+            </a></li>
 
+            <li><a class="contact__card" href="#" target="_blank" rel="noopener noreferrer" aria-label="Visite nosso Facebook">
+                <svg class="contact__icon">
+                    <use xlink:href="assets/img/icomoon/symbol-defs.svg#icon-facebook2"></use>
+                </svg>
+                <p class="contact__text">/autoescolaurbanitana</p>
+            </a></li>
 
-  </div>
-</section>
-
-        
-            
-
-            
-
-                        
-
-        
-        
-    
+        </ul>
+    </section>   
 
     <footer>
         <p>&copy; 2023 Auto Escola Urbanitana. Todos os direitos reservados.</p>
     </footer>
 
     <script src="js/script.js"></script>
-
+    </div>
 </body>
 
 </html>
