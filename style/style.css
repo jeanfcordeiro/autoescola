@@ -261,6 +261,7 @@ section.slider{
   color: var(--cor-fundo);
   text-align: center;
 }
+
 .contact__title{
   border-bottom: 1px solid var(--cor-secundaria);
   padding-bottom: .7rem;
@@ -305,6 +306,18 @@ section.slider{
 
 @media screen and (min-width: 800px) {
 
+  .services__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services__cards{
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
   .header{
     display: flex;
     justify-content: space-between;
@@ -319,6 +332,10 @@ section.slider{
     display: inline-block;
     margin-left: 2rem;
     font-size: large;
+  }
+
+  .row > .md-3 {
+    grid-column: span 3;
   }
 
   .row > .md-4 {
