@@ -53,18 +53,18 @@ section{
 /* header */
 .header{
   background-color: var(--cor-secundaria);
-
 }
 
-.header__nav-item{
+.header__nav-item a{
   padding: 1rem;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.header__nav-item:hover{
+.header__nav-item a:hover{
   transform: translateY(-4px);
   background-color: var(--cor-texto);
   color: var(--cor-secundaria);
+  font-weight: bold;
 }
 
 .header__nav-list{
@@ -109,12 +109,13 @@ section.slider{
 
 .slide-box img{
   width: 100%;
+  max-height: 40rem;
 }
 
 .nav-manual, .nav-auto{
   position: absolute;
   width: 100%;
-  margin-top: 61%;
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
 }
@@ -284,6 +285,10 @@ section.slider{
   padding: 0;  
 }
 
+.contact__text{
+  font-size: 1.4rem;
+}
+
 .contact__icon{
   fill: var(--cor-secundaria);
   height: 3rem;
@@ -306,6 +311,17 @@ section.slider{
 
 @media screen and (min-width: 800px) {
 
+  .body{
+    padding-top: 6rem;
+  }
+  .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
   .services__container{
     display: flex;
     flex-direction: column;
@@ -315,7 +331,7 @@ section.slider{
   .services__cards{
     max-width: 700px;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
   }
 
   .header{
@@ -348,6 +364,18 @@ section.slider{
 }
 
 @media screen and (min-width: 90em) {
+
+  .services__cards{
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+  }
+
+  .about__cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   .row > .lg-3 {
     grid-column: span 3;
   }
