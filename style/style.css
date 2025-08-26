@@ -26,6 +26,7 @@
 
 body {
   font-family: "DM sans", sans-serif;
+  color: var(--cor-texto);
   text-align: center;
   margin: 0;
   background-color: var(--cor-fundo);  
@@ -34,7 +35,6 @@ body {
 .content-wrapper-center{
   padding: 1rem;
 }
-
 
 a {
   text-decoration: none;
@@ -53,31 +53,59 @@ section{
 /* header */
 .header{
   background-color: var(--cor-secundaria);
-}
-
-.header__nav-item a{
-  padding: 1rem;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.header__nav-item a:hover{
-  transform: translateY(-4px);
-  background-color: var(--cor-texto);
-  color: var(--cor-secundaria);
-  font-weight: bold;
-}
-
-.header__nav-list{
-  list-style-type: none;
-  text-align: right;
-  
-  display: none;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__logo{
+  margin-left: 1rem;
+}
+
+.header__nav{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   padding: 1rem;
 }
 
+.header__toggle{
+  position: relative;
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
+  padding: 1.2rem 1rem;
+}
+
+.header__menu {
+    list-style-type: none;
+    padding: 0;
+    text-align: right;
+
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.header__menu.open {
+    max-height: 500px; 
+    opacity: 1;
+}
+
+.header__menu a {
+  display: inline-block;
+  padding: 1.2rem 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.header__menu a:hover,
+.header__toggle:hover{
+  background-color: var(--cor-secundaria-ligth);
+  transform: scale(1.2);
+  font-weight: bold;
+}
 
 /* Slider */
 
@@ -311,15 +339,22 @@ section.slider{
 
 @media screen and (min-width: 800px) {
 
-  .body{
-    padding-top: 6rem;
-  }
   .header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
+    padding: 1rem;
+  }
+
+  .header__nav{
+    padding: 0;
+  }
+
+  .header__toggle{
+    display: none;
+  }
+
+  .header__menu{
+    max-height: none;
+    opacity: 1; 
+    display: flex;
   }
 
   .services__container{
@@ -332,22 +367,6 @@ section.slider{
     max-width: 700px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-  }
-
-  .header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .header__nav-list{
-    display: block;
-  }
-
-  .header__nav-item{
-    display: inline-block;
-    margin-left: 2rem;
-    font-size: large;
   }
 
   .row > .md-3 {
